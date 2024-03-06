@@ -138,5 +138,44 @@ namespace TestTriangle
             //assert
             Assert.That(actual, Is.EqualTo(expected));
         }
+        [Test]
+        public void AnalyzeTriangle_input0and0and2_OutputInvalidTriangle()
+        {
+            //Arrange
+            int side1 = 0, side2 = 0, side3 = 2;
+            string expected = "At least one side entered had a zero - invalid triangle";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void AnalyzeTriangle_input0and1and2_OutputInvalidTriangle()
+        {
+            //Arrange
+            int side1 = 0, side2 = 1, side3 = 2;
+            string expected = "At least one side entered had a zero - invalid triangle";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void AnalyzeTriangle_input0and0and0_OutputInvalidTriangle()
+        {
+            //Arrange
+            int side1 = 0, side2 = 0, side3 = 0;
+            string expected = "At least one side entered had a zero - invalid triangle";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
