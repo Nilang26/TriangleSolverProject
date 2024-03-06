@@ -69,8 +69,74 @@ namespace TestTriangle
             string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
 
             //assert
-            Assert.That(actual, Is.EqualTo(expected)); 
+            Assert.That(actual, Is.EqualTo(expected));
 
+
+        }
+        [Test]
+        public void AnalyzeTriangle_input5and4and3_OutputScaleneTriangleIsFormed()
+        {
+            //Arrange
+            int side1 = 20, side2 = 10, side3 = 22;
+            string expected = "A scalene triangle is formed";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void AnalyzeTriangle_input10and20and12_OutputScaleneTriangleIsFormed()
+        {
+            //Arrange
+            int side1 = 10, side2 = 20, side3 = 12;
+            string expected = "A scalene triangle is formed";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void AnalyzeTriangle_input30and11and12_OutputScaleneTriangleIsFormed()
+        {
+            //Arrange
+            int side1 = 30, side2 = 20, side3 = 12;
+            string expected = "A scalene triangle is formed";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void AnalyzeTriangle_input22and20and21_OutputScaleneTriangleIsFormed()
+        {
+            //Arrange
+            int side1 = 22, side2 = 20, side3 = 21;
+            string expected = "A scalene triangle is formed";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void AnalyzeTriangle_input23and24and28_OutputScaleneTriangleIsFormed()
+        {
+            //Arrange
+            int side1 = 23, side2 = 24, side3 = 28;
+            string expected = "A scalene triangle is formed";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
         }
     }
 }
