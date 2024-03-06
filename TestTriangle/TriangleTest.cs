@@ -20,7 +20,7 @@ namespace TestTriangle
                 {
                     //Arrange
                     int side1 = 3, side2 = 3, side3 = 3;
-                    string expected = "An equilateral triangle is formed";
+                    string expected = "An equilateral triangle is formed"; 
 
                     //act
                     string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
