@@ -177,5 +177,44 @@ namespace TestTriangle
             //assert
             Assert.That(actual, Is.EqualTo(expected));
         }
+        [Test]
+        public void AnalyzeTriangle_input1and1and4_OutputNotATriangle()
+        {
+            //Arrange
+            int side1 = 1, side2 = 1, side3 = 4;
+            string expected = "A triangle cannot be formed";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void AnalyzeTriangle_input12and12and500_OutputNotATriangle()
+        {
+            //Arrange
+            int side1 = 12, side2 = 12, side3 = 500;
+            string expected = "A triangle cannot be formed";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void AnalyzeTriangle_input3and2and1000_OutputNotATriangle()
+        {
+            //Arrange
+            int side1 = 3, side2 = 2, side3 = 1000;
+            string expected = "A triangle cannot be formed";
+
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
