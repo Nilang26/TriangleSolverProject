@@ -12,36 +12,22 @@ namespace TestTriangle
     public class TriangleTest
     {
         [TestFixture]
-      
-            public class TringlesolverTestCase
-            {
-                [Test]
-                public void AnalyzeTriangle_input3and3and3_OutputEquilateralTriangleIsFormed()
-                {
-                    //Arrange
-                    int side1 = 3, side2 = 3, side3 = 3;
-                    string expected = "An equilateral triangle is formed"; 
 
-                    //act
-                    string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
-
-                    //assert
-                    Assert.That(actual, Is.EqualTo(expected));
-                }
-
-            }
-        [Test]
-        public void AnalyzeTriangle_input5and5and3_OutputIsoscelesTriangleIsFormed()
+        public class TringlesolverTestCase
         {
-            //Arrange
-            int side1 = 5, side2 = 5, side3 = 3;
-            string expected = "An isosceles triangle is formed";
+            [Test]
+            public void AnalyzeTriangle_input3and3and3_OutputEquilateralTriangleIsFormed()
+            {
+                //Arrange
+                int side1 = 3, side2 = 3, side3 = 3;
+                string expected = "An equilateral triangle is formed";
 
-            //act
-            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+                //act
+                string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
 
-            //assert
-            Assert.That(actual, Is.EqualTo(expected));
+                //assert
+                Assert.That(actual, Is.EqualTo(expected));
+            }
         }
 
         [Test]
@@ -57,6 +43,7 @@ namespace TestTriangle
             //assert
             Assert.That(actual, Is.EqualTo(expected));
         }
+
         [Test]
         public void AnalyzeTriangle_input4and4and3_OutputIsoscelesTriangleIsFormed()
         {
@@ -71,7 +58,18 @@ namespace TestTriangle
             Assert.That(actual, Is.EqualTo(expected));
         }
 
-    }
+        [Test]
+        public void AnalyzeTriangle_input1and1and3_OutputIsoscelesTriangleIsFormed()
+        {
+            //Arrange
+            int side1 = 5, side2 = 5, side3 = 3;
+            string expected = "An isosceles triangle is formed";
 
-    }
+            //act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
 
+            //assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+    }
+}

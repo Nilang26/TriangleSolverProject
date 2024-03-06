@@ -17,31 +17,26 @@ namespace TriangleSolver
                 return output;
             }
 
-                if (((firstSide + secondSide) > thirdSide) && ((firstSide + thirdSide) > secondSide) && ((secondSide + thirdSide) > firstSide))
+            if (((firstSide + secondSide) > thirdSide) && ((firstSide + thirdSide) > secondSide) && ((secondSide + thirdSide) > firstSide))
+            {
+                if ((firstSide == secondSide) && (firstSide == thirdSide) && (secondSide == thirdSide))
                 {
-                    if ((firstSide == secondSide) && (firstSide == thirdSide) && (secondSide == thirdSide))
-                    {
-                        output = "An equilateral triangle is formed";
-                    }
-                    else if ((firstSide == secondSide) || (secondSide == thirdSide) || (thirdSide == firstSide))
-                    {
-                        output = "An isosceles triangle is formed";
-
-                    }
-                    else
-                    {
-                        output = "A scalene triangle is formed";
-
-                    }
-
-
+                    output = "An equilateral triangle is formed";
+                }
+                else if ((firstSide == secondSide) || (secondSide == thirdSide) || (thirdSide == firstSide))
+                {
+                    output = "An isosceles triangle is formed";
                 }
                 else
                 {
-                    output = "A triangle cannot be formed";
+                    output = "A scalene triangle is formed";
                 }
+            }
+            else
+            {
+                output = "A triangle cannot be formed";
+            }
 
-            
             return output;
         }
     }
