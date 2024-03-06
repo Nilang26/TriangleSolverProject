@@ -69,7 +69,8 @@ namespace TestTriangle
             string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
 
             //assert
-            Assert.That(actual, Is.EqualTo(expected));
+            Assert.That(actual, Is.EqualTo(expected)); 
+
         }
     }
 }
